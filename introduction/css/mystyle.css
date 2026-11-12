@@ -1,8 +1,81 @@
-body{
-    background-color: pink;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-    font-family: 'Courier New', Courier, monospace;
-    color: aquamarine;
+body {
+  background-color: pink;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #1f7a68; /* Darker teal for readability on pink */
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Flexbox Parent Container */
+.profile-container {
+  display: flex;
+  flex-direction: row;       /* Places text and image side-by-side */
+  justify-content: center;   /* Centers the content horizontally */
+  align-items: flex-start;   /* Aligns items to the top */
+  gap: 30px;                 /* Adds space between the columns */
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;           /* Stacks columns on smaller/mobile screens */
+}
+
+/* Left Column (Flexbox Column for Cards) */
+.info-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #d63384;
+}
+
+.card p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Right Column (Image Container) */
+.image-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
