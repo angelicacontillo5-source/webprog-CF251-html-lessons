@@ -1,8 +1,59 @@
-body{
+
+body {
     background-color: pink;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-h1{
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+header {
+    background-color: lightpink;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
     font-family: 'Courier New', Courier, monospace;
     color: aquamarine;
+}
+
+.profile {
+    background-color: white;
+    padding: 20px;
+}
+
+.gallery {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.item {
+    background-color: lightpink;
+    padding: 50px;
+    font-size: 30px;
+}
+
+footer {
+    background-color: lightpink;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
