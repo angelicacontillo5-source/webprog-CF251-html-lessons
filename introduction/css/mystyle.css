@@ -96,8 +96,15 @@ footer {
     text-align: center;
     padding: 10px;
 }
+.grid-container img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    justify-self: center;
+    border-radius: 10px;
+}
 
-/* Responsive Design */
 @media screen and (max-width: 600px) {
     .container {
         grid-template-columns: 1fr;
