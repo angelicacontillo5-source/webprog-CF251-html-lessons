@@ -1,8 +1,126 @@
-body{
+body {
     background-color: pink;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-h1{
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "name name"
+        "education specialization"
+        "experience hobbies"
+        "goals goals"
+        "gallery gallery"
+        "footer footer";
+    gap: 15px;
+    padding: 20px;
+}
+
+header {
+    grid-area: header;
+    background-color: lightpink;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
     font-family: 'Courier New', Courier, monospace;
     color: aquamarine;
+}
+
+.name {
+    grid-area: name;
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.education {
+    grid-area: education;
+}
+
+.specialization {
+    grid-area: specialization;
+}
+
+.experience {
+    grid-area: experience;
+}
+
+.hobbies {
+    grid-area: hobbies;
+}
+
+.goals {
+    grid-area: goals;
+}
+
+.education,
+.specialization,
+.experience,
+.hobbies,
+.goals {
+    background-color: white;
+    padding: 20px;
+}
+
+h3 {
+    color: #c2185b;
+}
+
+.gallery {
+    grid-area: gallery;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.item {
+    background-color: lightpink;
+    padding: 50px;
+    font-size: 30px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightpink;
+    text-align: center;
+    padding: 10px;
+}
+.grid-container img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    justify-self: center;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "name"
+            "education"
+            "specialization"
+            "experience"
+            "hobbies"
+            "goals"
+            "gallery"
+            "footer";
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
